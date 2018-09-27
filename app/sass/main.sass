@@ -6,6 +6,7 @@
 	-webkit-box-sizing: border-box
 	-moz-box-sizing: border-box
 	box-sizing: border-box
+	font-size: 12pt
 	&:before, &:after
 		-webkit-box-sizing: border-box
 		-moz-box-sizing: border-box
@@ -45,6 +46,19 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 
+a
+	color: $primary-accent-dark
+
+a:hover
+	color: $primary-accent-light
+
+input.form-control
+	font-size: 2rem
+
+.btn
+	padding: 8px 20px
+	font-size: 1.3rem
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -56,5 +70,95 @@ body
 ::selection
 	background-color: $accent
 	color: #fff
+
+.primary-dark
+	background-color: $primary-dark
+.primary-light
+	background-color: $primary-light
+.primary
+	background-color: $primary
+.primary-accent-light
+	background-color: $primary-accent-light !important
+.primary-accent-dark
+	background-color: $primary-accent-dark
+
+.text-accent-light
+	color: $primary-accent-light
+.text-accent-dark
+	color: $primary-accent-dark
+
+.logo
+	margin: 0 0
+	max-height: 100px
+
+.navbar
+	background-color: $nav-color
+.navbar-brand
+	margin: 10px
+.nav-item
+	margin: 0 15px
+.navbar-phone > a
+	text-align: center
+	display: inline-block
+	padding: 10px 0 0px 0
+.navbar-phone > span
+	display: inline-block
+	text-align: center
+	padding: 10px 0 0 0
+
+
+
+// Услуги
+.service-section
+	height: 300px
+.service-section > div
+	padding: 50px 20px
+.service-label
+	float: none
+	display: block
+	margin: 0 auto
+
+// Главная лендинг
+.landing-menu
+	padding-top: 30px
+	padding-bottom: 30px
+.landing-menu > .row
+	height: 100%
+.landing-menu-item
+	height: 400px
+	//background: url("../img/Dialog-blue.png") center no-repeat
+	background-size: cover
+.landing-menu-item:hover
+	cursor: pointer
+	transition: .2s ease
+.landing-menu-item img
+	height: 400px
+	position: absolute
+.landing-menu-item img:hover
+	animation: shake .5s
+	animation-iteration-count: 1
+@keyframes shake 
+	0% 
+		transform: translate(1px, 1px) rotate(0deg)
+	10% 
+		transform: translate(-1px, -2px) rotate(-1deg)
+	20% 
+		transform: translate(-3px, 0px) rotate(1deg)
+	30% 
+		transform: translate(3px, 2px) rotate(0deg)
+	40% 
+		transform: translate(1px, -1px) rotate(1deg)
+	50% 
+		transform: translate(-1px, 2px) rotate(-1deg)
+	60% 
+		transform: translate(-3px, 1px) rotate(0deg)
+	70% 
+		transform: translate(3px, 1px) rotate(-1deg)
+	80% 
+		transform: translate(-1px, -1px) rotate(1deg)
+	90% 
+		transform: translate(1px, 2px) rotate(0deg)
+	100%
+		transform: translate(1px, -2px) rotate(-1deg)
 
 @import "media" // Всегда в конце
