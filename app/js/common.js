@@ -16,6 +16,8 @@ $(document).ready(function () {
 		let payment = monthlyPayments(amount, percent, period);
 
 		$('#amount')[0].value = amount;
+		$('#amount-label').addClass('active');
 		$('#payment')[0].value = payment || 'Недостаточно данных';
+		$('#payment-label').addClass('active');
 	});
 })

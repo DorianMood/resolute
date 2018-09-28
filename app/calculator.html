@@ -87,68 +87,44 @@
 				<div class="card">
 
 					<!--Card content-->
-					<div class="card-body">
+					<div class="card-body md-form text-center">
 						<!--Calculator-->
 						<h1>[[*longtitle]]</h1>
-
+						<br>
 						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text">Стоимость</span>
-							</div>
-							<input type="text" class="form-control" placeholder="Стоимость недвижимости" id="cost" value="0">
-							<div class="input-group-append">
-								<span class="input-group-text">.00 ₽</span>
-							</div>
+							<i class="prefix">₽</i>
+							<label for="cost">Стоимость</label>
+							<input type="text" class="form-control form-control-lg" id="cost" value="0">
 						</div>
 
 						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text">Первый взнос</span>
-							</div>
-							<input type="text" class="form-control" placeholder="Первоначальный взнос" id="first-payment" value="0">
-							<div class="input-group-append">
-								<span class="input-group-text">.00 ₽</span>
-							</div>
+							<i class="prefix">₽</i>
+							<label for="first-payment">Первый взнос</label>
+							<input type="text" class="form-control form-control-lg" id="first-payment" value="0">
 						</div>
 
 						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text">Сумма кредита</span>
-							</div>
-							<input type="text" class="form-control" placeholder="Сумма кредита" id="amount" readonly>
-							<div class="input-group-append">
-								<span class="input-group-text">.00 ₽</span>
-							</div>
+							<i class="prefix">₽</i>
+							<label for="amount" id="amount-label">Сумма кредита</label>
+							<input type="text" class="form-control form-control-lg" id="amount" readonly>
 						</div>
 
 						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text">Срок</span>
-							</div>
-							<input type="text" class="form-control" placeholder="Срок кредита" id="period">
-							<div class="input-group-append">
-								<span class="input-group-text">мес.</span>
-							</div>
+							<i class="prefix">м</i>
+							<label for="period">Срок кредита</label>
+							<input type="text" class="form-control" id="period">
 						</div>
 
 						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text">Ставка</span>
-							</div>
-							<input type="text" class="form-control" placeholder="Процентная ставка" id="percent">
-							<div class="input-group-append">
-								<span class="input-group-text">%</span>
-							</div>
+							<i class="prefix">%</i>
+							<label for="percent">Ставка</label>
+							<input type="text" class="form-control" id="percent">
 						</div>
 
 						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text">В месяц</span>
-							</div>
-							<input type="text" class="form-control" placeholder="Месячный платеж" id="payment" readonly>
-							<div class="input-group-append">
-								<span class="input-group-text">.00 ₽</span>
-							</div>
+							<i class="prefix">₽</i>
+							<label for="payment" id="payment-label">В месяц</label>
+							<input type="text" class="form-control form-control-lg" id="payment" readonly>
 						</div>
 						<!--Calculator-->
 					</div>
