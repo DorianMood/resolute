@@ -26,6 +26,7 @@
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
+    "gulp-uglify-es": "^1.0.4",
     "hover.css": "^2.3.2",
     "mdbootstrap": "^4.5.8"
   }

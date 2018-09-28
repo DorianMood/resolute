@@ -3,7 +3,7 @@ var gulp           = require('gulp'),
 		sass           = require('gulp-sass'),
 		browserSync    = require('browser-sync'),
 		concat         = require('gulp-concat'),
-		uglify         = require('gulp-uglify'),
+		uglify         = require('gulp-uglify-es').default,
 		cleanCSS       = require('gulp-clean-css'),
 		rename         = require('gulp-rename'),
 		del            = require('del'),
@@ -32,7 +32,7 @@ gulp.task('common-js', function() {
 		'app/js/common.js',
 		])
 	.pipe(concat('common.min.js'))
-	.pipe(uglify())
+	.pipe(uglify().on('error', (e) => { console.log(e)}))
 	.pipe(gulp.dest('app/js'));
 });
 

@@ -34,26 +34,25 @@
 		<!--Navbar-->
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
-				<div class="col-md-3">
+				<div class="col-3 col-md-3 navbar-brand">
 					<!-- Navbar brand -->
 					<a class="navbar-brand" href="/">
-						<img src="img/logo.png" class="logo"/>
+						<img src="img/logo.png" class="logo" />
 					</a>
 				</div>
 
-				<div class="col-md-6 flex-center">
+				<div class="col-md-6 flex-center navigation-block">
 					<!-- Collapse button -->
-					<button class="navbar-toggler">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+					 aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<!-- Collapsible content -->
 					<div class="collapse navbar-collapse" id="basicExampleNav">
-
 						<!-- Links -->
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item active">
-								<a class="nav-link" href="#">Главная
-								</a>
+								<a class="nav-link" href="/">Главная</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="/items.html">Объекты</a>
@@ -61,22 +60,17 @@
 							<li class="nav-item">
 								<a class="nav-link" href="/service.html">Услуги</a>
 							</li>
-
-							<!-- Dropdown -->
 							<li class="nav-item">
 								<a class="nav-link" href="#">Обратная связь</a>
 							</li>
-
 						</ul>
 					</div>
 					<!-- Collapsible content -->
 				</div>
-				<div class="col-md-3 flex-center navbar-phone row">
-					
+				<div class="col-6 col-md-3 flex-center navbar-phone row">
 					<!-- Navbar phone -->
 					<a class="col-md-12" href="tel:8-912-29-25-698">
 						<i class="fas fa-phone fa-2x"></i>
-						<!-- make the cellphone blue -->
 					</a>
 					<span class="col-md-12">8-912-29-25-698</span>
 				</div>
@@ -87,42 +81,44 @@
 
 	<section class="landing-menu container">
 		<div class="row">
-			<div class="col-md-4 offset-md-2 landing-menu-item flex-center view overlay">
-				<span class="landing-menu-item-label text-monospace">
-					ИПОТЕКА - это просто!<br />Рассчитай сам
-				</span>
-				<div class="mask landing-menu-item-overlay"></div>
-				<img src="img/Dialog-blue.png">
+			<div class="col-lg-4 offset-lg-2 landing-menu-item flex-center view overlay">
+				<a href="/calculator.html" class="flex-center">
+					<span class="landing-menu-item-label text-monospace">
+						ИПОТЕКА - это просто!<br />Рассчитай сам
+					</span>
+					<div class="mask landing-menu-item-overlay"></div>
+					<img src="img/Dialog-blue.png">
+				</a>
 			</div>
-			<div class="col-md-4 landing-menu-item flex-center view overlay">
+			<div class="col-lg-4 landing-menu-item flex-center view overlay">
 				<span class="landing-menu-item-label text-monospace">
 					РИЭЛТОР - кто это и зачем
 				</span>
 				<div class="mask landing-menu-item-overlay"></div>
 				<img src="img/Dialog-yellow.png">
 			</div>
-			<div class="col-md-4 offset-md-2 landing-menu-item flex-center view overlay">
+			<div class="col-lg-4 offset-lg-2 landing-menu-item flex-center view overlay">
 				<span class="landing-menu-item-label text-monospace">
 					Продаем квартиру вместе
 				</span>
 				<div class="mask landing-menu-item-overlay"></div>
 				<img src="img/Dialog-blue.png">
 			</div>
-			<div class="col-md-4 landing-menu-item flex-center view overlay">
+			<div class="col-lg-4 landing-menu-item flex-center view overlay">
 				<span class="landing-menu-item-label text-monospace">
 					Новостройка. Где, почем.
 				</span>
 				<div class="mask landing-menu-item-overlay"></div>
 				<img src="img/Dialog-yellow.png">
 			</div>
-			<div class="col-md-4 offset-md-2 landing-menu-item flex-center view overlay">
+			<div class="col-lg-4 offset-lg-2 landing-menu-item flex-center view overlay">
 				<span class="landing-menu-item-label text-monospace">
 					Объекты
 				</span>
 				<div class="mask landing-menu-item-overlay"></div>
 				<img src="img/Dialog-blue.png">
 			</div>
-			<div class="col-md-4 landing-menu-item flex-center view overlay">
+			<div class="col-lg-4 landing-menu-item flex-center view overlay">
 				<span class="landing-menu-item-label text-monospace">
 					Спроси нас. Спрашивай-с.
 				</span>
@@ -206,4 +202,5 @@
 
 	<script src="js/scripts.min.js"></script>
 </body>
+
 </html>
