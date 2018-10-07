@@ -11,19 +11,15 @@
 		-webkit-box-sizing: border-box
 		-moz-box-sizing: border-box
 		box-sizing: border-box
-
 *::-webkit-input-placeholder
 	color: #666
 	opacity: 1
-
 *:-moz-placeholder
 	color: #666
 	opacity: 1
-
 *::-moz-placeholder
 	color: #666
 	opacity: 1
-
 *:-ms-input-placeholder
 	color: #666
 	opacity: 1
@@ -34,27 +30,23 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: #666
-
 html, body
 	font-size: 1em
 	height: 100%
-
 body
 	min-width: 320px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
-
 a
 	color: $primary-accent-dark
-
 a:hover
 	color: $primary-accent-light
 
 
 
-
+// Inputs
 .input-group
 	margin: 20px
 .input-group-text 
@@ -62,22 +54,21 @@ a:hover
 .input-group > input
 	margin-right: 5rem !important
 
+// Helpers
 .btn
 	padding: 8px 20px
 	font-size: 1.3rem
-
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
-
 .text-center
 	text-align: center
-
 ::selection
 	background-color: $accent
 	color: #fff
 
+// Colors
 .primary-dark
 	background-color: $primary-dark
 .primary-light
@@ -88,7 +79,6 @@ a:hover
 	background-color: $primary-accent-light !important
 .primary-accent-dark
 	background-color: $primary-accent-dark
-
 .text-accent-light
 	color: $primary-accent-light
 .text-accent-dark
@@ -124,15 +114,42 @@ a:hover
 	margin: 0 1rem
 .social-buttons > i:hover
 	cursor: pointer
-// // Услуги
-// .service-section
-// 	height: 300px
+
+// Service
 .service-section > div
 	padding: 50px 20px
 .service-label
 	float: none
 	display: block
 	margin: 0 auto
+
+// Contacts
+.contact
+	padding: 4rem
+	position: relative
+.contact-name
+	font-size: 1.5em
+	display: block
+.contact-role
+	font-size: 1.2em
+	font-style: italic
+	display: block
+.contact-description
+	padding: 1em 0
+.corner-left
+	height: 2em
+	width: 2em
+	background-color: $primary-accent-light
+	position: absolute
+	top: 1em
+	left: 1em
+.corner-right
+	height: 1em
+	width: 1em
+	background-color: lighten($primary, 0)
+	position: absolute
+	bottom: 2em
+	right: 2em
 
 // Главная лендинг
 .landing-menu
