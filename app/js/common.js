@@ -21,3 +21,20 @@ $(document).ready(function () {
 		$('#payment-label').addClass('active');
 	});
 })
+
+$(function(){
+	const shrinkHeader = 100;
+
+	$(window).scroll(function() {
+		var scroll = getCurrentScroll();
+		if ( scroll >= shrinkHeader ) {
+			$('.logo').addClass('shrink');
+		}
+		else {
+			$('.logo').removeClass('shrink');
+		}
+	});
+	function getCurrentScroll() {
+		return window.pageYOffset || document.documentElement.scrollTop;
+	}
+});
