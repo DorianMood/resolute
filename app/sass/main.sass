@@ -39,6 +39,7 @@ body
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
+	padding-top: 200px
 a
 	color: $primary-accent-dark
 a:hover
@@ -89,9 +90,16 @@ a:hover
 .logo
 	margin: 0 0
 	max-height: 130px
+	-webkit-transition: all 0.3s
+	-moz-transition: all 0.3s
+	transition: all 0.3s
 .navbar
 	background-color: $nav-color
 	box-shadow: 0 0.2rem 0 0 $primary-accent-light
+	position: fixed
+	top: 0
+	z-index: 100
+	width: 100%
 .navbar-brand
 	margin: 0px
 .nav-item
@@ -106,13 +114,18 @@ a:hover
 	padding: 10px 0 0 0
 .navbar-toggler-icon
 	background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+.logo.shrink
+	max-height: 70px
+	-webkit-transition: all 0.3s
+	-moz-transition: all 0.3s
+	transition: all 0.3s
 
 // footer
 .social-buttons
-	background-color: lighten($primary-accent-light, 5)
-.social-buttons > i
+	background-color: $primary-light
+.social-buttons > a
 	margin: 0 1rem
-.social-buttons > i:hover
+.social-buttons > a
 	cursor: pointer
 
 // Service
@@ -123,6 +136,33 @@ a:hover
 	display: block
 	margin: 0 auto
 
+// Objects
+.object-container
+	margin: 2em
+.object-image-preview
+	margin: 1em
+	max-height: 150px
+
+// Object single
+.object
+	margin: 3em 0
+	padding: 1em
+.object > h1
+	margin: 1em
+.object-image
+	max-height: 400px
+	max-width: 100%
+.object-table-title
+	margin: 0 0 1em 0
+.object-agent-card
+	margin: 2em 0
+	padding: 2em
+	height: 550px
+	background-color: lighten($primary-light, 30)
+	background: url("../img/Dialog-blue.png") center no-repeat
+	background-size: auto
+.object-agent-card-links
+	margin: 2em
 // Contacts
 .contact
 	padding: 4rem
