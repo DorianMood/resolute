@@ -152,17 +152,38 @@ a:hover
 .object-image
 	max-height: 400px
 	max-width: 100%
+.object-table th
+	font-size: 0.9em
 .object-table-title
 	margin: 0 0 1em 0
+.object-left-column
+	position: relative
 .object-agent-card
 	margin: 2em 0
 	padding: 2em
 	height: 550px
-	background-color: lighten($primary-light, 30)
-	background: url("../img/Dialog-blue.png") center no-repeat
 	background-size: auto
+	position: absolute
+	bottom: 0
+	width: 100%
 .object-agent-card-links
-	margin: 2em
+	margin: 0.5em
+.object-agent-card-links i
+	margin: 0 0.2em
+.object-price
+	margin: 1em 0
+	padding: 2em
+	background-color: darken(white, 3)
+.object-price:hover
+	background-color: darken(white, 7)
+.object-price > strong
+	font-size: 2em
+	color: $primary-accent-dark
+.object-agent-card img
+	z-index: -1
+.object-agent-card p > a, h3
+	font-size: 1.3em
+
 // Contacts
 .contact
 	padding: 4rem
