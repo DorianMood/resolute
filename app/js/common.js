@@ -1,3 +1,4 @@
+// process monthly payments
 const monthlyPayments = (amount, yearRate, period) => {
 	let monthRate = 1.0 * yearRate / 12.0 / 100;
 	//  amount * (monthRate * (1 + monthRate) ^ period) / ((1 + monthRate) ^ period — 1)
@@ -5,6 +6,7 @@ const monthlyPayments = (amount, yearRate, period) => {
 		(Math.pow(1 + monthRate, period) - 1);
 	return Math.ceil(payment);
 }
+// refresh all the inputs in calculator
 const refresh = () => {
 	let cost = parseInt($('#cost')[0].value);
 	let firstPayment = parseInt($('#first-payment')[0].value);
@@ -18,16 +20,27 @@ const refresh = () => {
 	$('#payment')[0].value = payment || 'Недостаточно данных';
 	$('#payment-label').addClass('active');
 }
+// process parameters from the href
+const processParameters = () => {
+	let url = new URL(document.location.href);
+	
+	let params = {};
+	params['cost'] = parseInt(url.searchParams.get('price').replace(/\s/g, ''));
+	
+	$('#cost')[0].value = params.cost;
+}
+
 $(document).ready(function () {
+	processParameters();
 	refresh();
 	$('input.form-control').on('keyup', (e) => {
 		refresh();
 	});
 })
 
+// navbar scroll
 $(function(){
 	const shrinkHeader = 100;
-
 	$(window).scroll(function() {
 		var scroll = getCurrentScroll();
 		if ( scroll >= shrinkHeader ) {
