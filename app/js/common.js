@@ -5,20 +5,23 @@ const monthlyPayments = (amount, yearRate, period) => {
 		(Math.pow(1 + monthRate, period) - 1);
 	return Math.ceil(payment);
 }
+const refresh = () => {
+	let cost = parseInt($('#cost')[0].value);
+	let firstPayment = parseInt($('#first-payment')[0].value);
+	let amount = cost - firstPayment;
+	let period = parseInt($('#period')[0].value);
+	let percent = parseFloat($('#percent')[0].value);
+	let payment = monthlyPayments(amount, percent, period);
 
+	$('#amount')[0].value = amount;
+	$('#amount-label').addClass('active');
+	$('#payment')[0].value = payment || 'Недостаточно данных';
+	$('#payment-label').addClass('active');
+}
 $(document).ready(function () {
+	refresh();
 	$('input.form-control').on('keyup', (e) => {
-		let cost = parseInt($('#cost')[0].value);
-		let firstPayment = parseInt($('#first-payment')[0].value);
-		let amount = cost - firstPayment;
-		let period = parseInt($('#period')[0].value);
-		let percent = parseFloat($('#percent')[0].value);
-		let payment = monthlyPayments(amount, percent, period);
-
-		$('#amount')[0].value = amount;
-		$('#amount-label').addClass('active');
-		$('#payment')[0].value = payment || 'Недостаточно данных';
-		$('#payment-label').addClass('active');
+		refresh();
 	});
 })
 
@@ -29,9 +32,11 @@ $(function(){
 		var scroll = getCurrentScroll();
 		if ( scroll >= shrinkHeader ) {
 			$('.logo').addClass('shrink');
+			$('.navbar-phone').addClass('shrink');
 		}
 		else {
 			$('.logo').removeClass('shrink');
+			$('.navbar-phone').removeClass('shrink');
 		}
 	});
 	function getCurrentScroll() {
