@@ -22,12 +22,16 @@ const refresh = () => {
 }
 // process parameters from the href
 const processParameters = () => {
-	let url = new URL(document.location.href);
-	
-	let params = {};
-	params['cost'] = parseInt(url.searchParams.get('price').replace(/\s/g, ''));
-	
-	$('#cost')[0].value = params.cost;
+	try {
+		let url = new URL(document.location.href);
+		
+		let params = {};
+		params['cost'] = parseInt(url.searchParams.get('price').replace(/\s/g, ''));
+		
+		$('#cost')[0].value = params.cost;
+	} catch (err) {
+
+	}
 }
 
 $(document).ready(function () {
